@@ -8,7 +8,12 @@ $sec: #494949
 $outline: #ff6500
 $text: transparentize($sec, .5)
 
-// Estilos generales
+///////////////////////
+///////////////////////
+// Estilos generales //
+///////////////////////
+///////////////////////
+
 a
     margin: 0px
     padding: 0px
@@ -27,25 +32,126 @@ p
     -o-transition: all .5s ease-in-out
     transition: all .5s ease-in-out
 
-.pad_100
-    padding: 100px 0px
+.pad_200
+    padding: 200px 0px
 
 .center
     text-align: center
     margin: 0px auto
 
+.main-title
+    font-size: 60px
+    font-weight: bold
+    color: $base
 
-// Estilos de los inputs, textarea, buttons
+//////////////////////////////////////////////
+//////////////////////////////////////////////
+// Estilos de los inputs, textarea, buttons //
+//////////////////////////////////////////////
+//////////////////////////////////////////////
 
-// Estilos de barra de navegación
+imput, select, option, textarea
+    width: 100%
+    padding: 10px 15px
+    border: 1px solid $base
+    margin: 5px 0px
+    opacity: .5
+    @extend .tSlow;
+    &:hover, &:focus
+        opacity: 1
+        color: $base
+
+textarea
+    max-width: 100%
+    min-width: 100%
+    min-height: 150px
+    max-height: 250px
+
+button
+    background-color: transparent
+    text-transform: uppercase
+    border: 1px solid $base
+    padding: 10px 20px
+    margin: 5px 0px
+    color: $base
+    font-size 16px
+    letter-spacing: 1px
+    cursor: pointer
+    opacity: .7
+    @extend .tSlow;
+    &:hover
+        opacity: 1
+        background-color: $base
+        color: white
+
+.black
+    background-color: $base
+    opacity: 1
+    color: white
+    &:hover
+        background-color: $outline
+        border: 1px solid outline
+
+//////////////////////////////////////////////
+//////////////////////////////////////////////
+// Imágenes del sitio //
+//////////////////////////////////////////////
+//////////////////////////////////////////////
+
+.servicio-img
+    width: 250px
+    height: 250px
+    @extend .rombo;
+
+.rombo
+    -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)
+    -o-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)
+    @extend .tSlow;
+    &:hover
+        clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% 0%)
+
+.diamante
+    display: block
+    position: relative
+    width: 100%
+    overflow: hidden
+    margin: 0px auto
+    background-image: url("../images/square_01.jpg)
+    background-size: 100%
+    background-position: center
+    background-repeat: no-repeat
+    @extend .rombo;
+    z-index: 50
+
+////////////////////////////////////
+////////////////////////////////////
+// Estilos de barra de navegación //
+////////////////////////////////////
+////////////////////////////////////
+
 nav
     width: 100%
-    background-color: lighten(red, 40)
+    background-color: transparent
     padding: 10px 0px
     position: fixed
     border-bottom: 1px solid transparent
     z-index: 100
     @extend .tSlow;
+    // Animación de la barra al hacer hover.
+    &:hover
+        background-color: white
+        padding: 25px
+        border: 1px solid transparentize($base, .9)
+        .logo
+            img
+                width: 80%
+        ul
+            margin-top: 8px
+            li
+                a
+                    color: $text
+    ///////////////////////////////////////
     .logo
         img
             width: 100%
@@ -53,7 +159,7 @@ nav
 
     ul
         margin: 0px
-        margin-top: 8px
+        margin-top: 12px
         padding: 0px
         text-align: right
         @extend .tSlow;
@@ -71,7 +177,8 @@ nav
                 position: relative
                 text-decoration: none
                 font-size: 16px
-                color: $text
+                text-transform: uppercase
+                color: transparentize(white, .2)
                 @extend .tSlow;
                 &:before
                     content: ''
@@ -98,3 +205,150 @@ nav
                     &:after
                         width: 100%
                         background-color: $base
+
+.nav-overlay
+    background-color: white
+    border-bottom: ipx solid transparentize($base, .9)
+    padding: 25px 0px
+    .logo
+        img
+            width: 80%
+    ul
+        margin-top: 8px
+        li
+            a
+                color: $text
+
+////////////////////////////
+////////////////////////////
+// ESTILOS SLIDER SLIPPRY //
+////////////////////////////
+////////////////////////////
+
+#slider
+    backface-visibility: hidden
+    -webkit-clip-path: polygon(100% 0%, 100% 100%, 50% 85%, 0% 100%, 0% 0%)
+    -o-clip-path: polygon(100% 0%, 100% 100%, 50% 85%, 0% 100%, 0% 0%)
+    clip-path: polygon(100% 0%, 100% 100%, 50% 85%, 0% 100%, 0% 0%)
+
+#slippry
+    position: relative
+    h1, h2, h3, h4, h5, h6, p, a, button
+        position: absolute
+    p
+        width: 600px
+    .white_bg
+        background-color transparentize(white, .2)
+        padding: 5px 10px
+    .left
+        left: 200px
+    .right
+        right: 200px
+    .top_250
+        top: 250px
+    .top_300
+        top: 300px
+    .top_375
+        top: 375px
+    .top_400
+        top: 400px
+    .top_450
+        top: 450px
+
+//////////////////////////////////////////////
+//////////////////////////////////////////////
+// Footer y estilos //
+//////////////////////////////////////////////
+//////////////////////////////////////////////
+
+footer
+    margin-top: -60px
+    width: 100%
+    background-color: $base
+    padding: 70px 0px
+    -webkit-clip-path: polygon(0% 15%, 50% 0%,, 100% 15%, 100% 100%, 0% 100%)
+    -o-clip-path: polygon(0% 15%, 50% 0%,, 100% 15%, 100% 100%, 0% 100%)
+    clip-path: polygon(0% 15%, 50% 0%,, 100% 15%, 100% 100%, 0% 100%)
+    p
+        margin: 0px
+        padding: 0px
+    .white
+        color: transparentize(white, .6)
+    ul
+        padding: 0px
+        margin: 0px
+        list-style: none
+        li
+            padding: 0px
+            margin: 0px
+            color: transparentize(white, .8)
+    hr
+        border-radius: 10px
+        background-color: transparentize(white, .92)
+
+.tumblr
+    position: relative
+    float: left
+    margin: opx
+    width: 20%
+    cursor: pointer
+    opacity: .7
+    @extend .tSlow;
+    &:hover
+        opacity: 1
+
+.copy
+    padding: 10px
+    background-color: lighten($base, 1)
+    text-align: left
+    p, a
+        margin: 0px
+        padding: 0px
+        color: transparentize(white, .7)
+    a
+        opacity: .5
+        color: $outline
+        @extend .tSlow;
+        &:hover
+            opacity: 1
+            text-decoration: none
+
+.social-networks
+    margin-top: 5px
+    li
+        display: inline-block
+        position: relative
+        margin: 0px 7px
+        float: left
+        width: 30px
+        height: 30px
+        text-align: center
+        -webkit-transform: rotate(0deg)
+        -ms-transform: rotate(0deg)
+        -o-transform: rotate(0deg)
+        transform: rotate(0deg)
+        backface-visibility: hidden
+        cursor: pointer
+        @extend .tSlow;
+        i
+            font-size: 22px
+            color: transparent(white, .8)
+            -webkit-transform: rotate(0deg) translate(-3px, 3px)
+            -ms-transform: rotate(0deg) translate(-3px, 3px)
+            -o-transform: rotate(0deg) translate(-3px, 3px)
+            transform: rotate(0deg) translate(-3px, 3px)
+            backface-visibility: hidden
+            @extend .tSlow;
+        &:hover
+            -webkit-transform: rotate(45deg)
+            -ms-transform: rotate(45deg)
+            -o-transform: rotate(45deg)
+            transform: rotate(45deg)
+            background-color: white
+            backface-visibility: hidden
+            i
+                color: $base
+                -webkit-transform: rotate(-45deg) translate(-3px, 3px)
+                -ms-transform: rotate(-45deg) translate(-3px, 3px)
+                -o-transform: rotate(-45deg) translate(-3px, 3px)
+                transform: rotate(-45deg) translate(-3px, 3px)
