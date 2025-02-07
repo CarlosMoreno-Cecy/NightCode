@@ -6,9 +6,9 @@
     <title>Contacto - Blackparadox</title>
 
     <!-- SEO natural -->
-    <meta name="author" content="Axel Agabo">
-    <meta name="copyright" content="&copy; Axel Agabo 2025. Todos los derechos reservados.">
-    <meta name="email" content="hellow@localhost.com.mx">
+    <meta name="author" content="Joystick">
+    <meta name="copyright" content="&copy; Joystick 2017. Todos los derechos reservados.">
+    <meta name="email" content="hellow@joystick.com.mx">
     <meta name="robots" content="index,follow">
     <meta name="description"
         content="Expertos en fotografía, retratamos los momentos que siempre quieres conservar contigo, con más de 15 años de experiencia en crear recuerdos inolvidables">
@@ -77,13 +77,16 @@
             <!-- formulario -->
             <li class="formulario">
                 <h3>Déjanos un mensaje</h3>
-                <form action="procesos/submit.php" method="POST">
-                    <input type="name" name="nombre" placeholder="Tu nombre">
-                    <input type="email" name="email" placeholder="Tu e-mail">
-                    <input type="tel" name="tel" placeholder="Tu teléfono">
-                    <textarea name="mensaje" placeholder="Tu mensaje..."></textarea>
-                    <button type="submit" name="submit" class="black">Enviar mensaje</button>
-                </form>
+                <div class="wrapper_msg"></div>
+                <div class="wrapper_contact_form">
+                    <form method="POST" id="do_contact_form">
+                        <input type="name" name="nombre" placeholder="Tu nombre" id="nombre">
+                        <input type="email" name="email" placeholder="Tu e-mail" id="email">
+                        <input type="tel" name="tel" placeholder="Tu teléfono" id="tel">
+                        <textarea name="mensaje" placeholder="Tu mensaje..." id="mensaje"></textarea>
+                        <button type="submit" name="submit" class="black submit_button">Enviar mensaje</button>
+                    </form>
+                </div>
             </li>
         </ul>
     </div>
@@ -147,7 +150,7 @@
             <div class="row">
                 <div class="col">
                     <p class="small">
-                        &copy; 2025 Todos los derechos reservados por <a href="#">Blackparadox</a>.
+                        &copy; 2017 Todos los derechos reservados por <a href="#">Blackparadox</a>.
                     </p>
                 </div>
             </div>
@@ -156,18 +159,10 @@
     <!-- ends footer -->
 
     <!-- Bootstrap 4 JS CDN -->
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
-        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
-        integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
-        integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
     <script src="js/slippry.min.js"></script>
-    <script src="js/lightbox.min.js"></script>
-
-    <!-- Activación y scripts -->
     <script>
         $(document).ready(function () {
 
@@ -201,6 +196,7 @@
             $(window).scroll();
         });
     </script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

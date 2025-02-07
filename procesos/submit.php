@@ -35,8 +35,8 @@ if (isset($_POST['submit'])) {
         <p><strong>Teléfono:</strong> {$info['telefono']}</p>
         <p><strong>Mensaje:</strong> {$info['mensaje']}</p>
         <br>
-        <p><strong>IP:</strong> {info['ip']}</p>
-        <p><strong>Fecha:</strong> {info['fecha']}</p>
+        <p><strong>IP:</strong> {$info['ip']}</p>
+        <p><strong>Fecha:</strong> {$info['fecha']}</p>
         </body>
         </html>
         ";
