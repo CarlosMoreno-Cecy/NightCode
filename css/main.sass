@@ -142,7 +142,7 @@ nav
     &:hover
         background-color: white
         padding: 25px
-        border: 1px solid transparentize($base, .9)
+        border-bottom: 1px solid transparentize($base, .9)
         .logo
             img
                 width: 80%
@@ -254,6 +254,62 @@ nav
         top: 400px
     .top_450
         top: 450px
+
+////////////////////////////
+////////////////////////////
+// Estilos del portafolio //
+////////////////////////////
+////////////////////////////
+
+.grid
+    width: 100%
+    padding: 150px 0px
+    &:after
+        content: ''
+        display: block
+        clear: both
+    
+.grid-item
+    width: 20%
+    padding-bottom: 20%
+    overflow: hidden
+    float: left
+    position: relative
+    background-color: white
+    -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)
+    -o-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)
+    cursor: pointer
+    margin-top: -90px  // -90px es el adecuado. -110px para el contenido pegado.
+    @extend .tSlow;
+    &:before
+        content: ''
+        position: absolute
+        background-color: transparent()
+        background-image: none
+        background-position: center center
+        width: 100%
+        height: 100%
+        pointer-events: none
+        @extend .tSlow;
+    &:nth-child(6), &:nth-child(15)
+        margin-left: 110px // 111px para contenido pegado
+    a
+        img
+            width: 100%
+            height: auto
+    &:hover
+        &:before
+            content: ''
+            position: absolute
+            background-color: transparentize($outline, .1)
+            background-image: url(../images/cross.png) //no-repeat
+            background-repeat: no-repeat
+            background-size: 30%
+            background-position: center center
+            width: 100%
+            height: 100%
+
 
 //////////////////////////////////////////////
 //////////////////////////////////////////////
